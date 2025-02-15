@@ -1,0 +1,78 @@
+/* CSS pour réduire une image à la taille d'un logo */
+.logo {
+    width: 120px; /* Ajuste cette valeur selon la taille souhaitée */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+}
+
+/* Conteneur de la conférence */
+.conference-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  
+  /* Conteneur vidéo */
+  .video-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #e0f7fa; /* Couleur de fond pour la vidéo */
+  }
+  
+  /* Grille des vidéos */
+  #video-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    height: 100%;
+    max-height: 100%; /* Empêche le dépassement vertical */
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Style des vidéos */
+  #video-grid video {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    object-fit: contain; /* Ajuste la vidéo pour qu'elle tienne dans l'espace disponible */
+    background-color: black;
+    position: relative;
+  }
+  
+  #video-grid .my-small-video {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    bottom: 10px; /* Placer en bas */
+    right: 10px;  /* Placer à droite */
+    border: 2px solid white;
+    z-index: 2;
+    object-fit: cover; /* Remplit l'espace tout en conservant le ratio */
+  }
+
+
+.participants-list h2 {
+  margin-top: 0;
+}
+
+/* Style des éléments de la liste des participants */
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
